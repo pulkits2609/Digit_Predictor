@@ -1,0 +1,49 @@
+{
+  "name": "NeuralInk",
+  "version": "1.0.0",
+  "dataset": "MNIST",
+  "input_shape": [
+    28,
+    28,
+    1
+  ],
+  "classes": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9
+  ],
+  "parameter_count": 225034,
+  "architecture": [
+    "Input 28x28x1",
+    "Training-only rotation/translation/zoom",
+    "Conv2D 32, 3x3, ReLU",
+    "MaxPooling2D 2x2",
+    "Conv2D 64, 3x3, ReLU",
+    "MaxPooling2D 2x2",
+    "Flatten",
+    "Dense 128, ReLU",
+    "Dropout 0.3",
+    "Dense 10, Softmax"
+  ],
+  "tensorflow_version": "2.18.1",
+  "seed": 42,
+  "epochs_requested": 8,
+  "epochs_completed": 8,
+  "best_epoch": 8,
+  "batch_size": 128,
+  "training_samples": 54000,
+  "validation_samples": 6000,
+  "training_seconds": 63.818,
+  "evaluation_metrics": {
+    "test_accuracy": 0.9923999905586243,
+    "test_loss": 0.022744307294487953
+  },
+  "limitations": "MNIST accuracy does not establish accuracy on photographs or browser handwriting. Softmax confidence is not calibrated correctness."
+}

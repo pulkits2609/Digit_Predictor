@@ -1,0 +1,8 @@
+# Install this outside the repo at /etc/cloudflared/config.yml.
+# Replace UUID, domain and credential filename with your own values.
+tunnel: REPLACE_WITH_TUNNEL_UUID
+credentials-file: /etc/cloudflared/REPLACE_WITH_TUNNEL_UUID.json
+ingress:
+  - hostname: api.example.com
+    service: http://127.0.0.1:8000
+  - service: http_status:404
